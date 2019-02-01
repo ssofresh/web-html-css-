@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>productform</title>
+</head>
+<body>
+<h1>납품 주문 양식</h1>
+<form method="post" action="">
+<fieldset>
+<legend>납품자정보</legend>
+<ol>
+	<li>
+		<label for="name">납품자명 : </label> 
+		<input type="text" name="name" id="name" placeholder="name" required>
+	</li>
+	<li>
+		<label for="email">이메일 : </label> 
+		<input type="email" name="email" id="email" placeholder="answs@naver.com" required>
+	</li>
+	<li>
+		<label for="website">홈페이지 : </label> 
+		<input type="url" name="website" id="website" placeholder="http://" required>
+	</li>
+</ol>
+</fieldset>
+<br>
+<fieldset>
+<legend>납품정보</legend>
+<ul>
+	<li>
+		<label for="irum">상품명 : </label>
+		<input type="text" id="irun" name="irum" list="goodlist">
+		<datalist id="goodlist">
+			<option value="dog1004">도그1004</option>
+			<option value="catchicken">고양이치킨</option>
+			<option value="milk">우유</option>
+		</datalist>
+	</li> 
+	<li>
+		<label for="irum">납품수량 : </label>
+		<input type="number" id="number" name="quantity" min="10" max="100" step="10" placeholder="최소10이상">
+	</li>
+	<li>
+		<label for="irum">납품등급 : </label>
+		<input type="range" id="level" name="level" min="0" max="10" step="2">
+	</li> 
+	<li>
+		<label for="message">기타사항 : </label>
+		<textarea rows="3" cols="30" id="message" name="message"></textarea>
+</ul>
+</fieldset>
+<br>
+<input type="submit" value="send message">
+</form>
+</body>
+</html>
